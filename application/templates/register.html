@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:rgb(15, 5, 5)">
+            {{ form.hidden_tag() }}
+
+            {% with messages=get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+
+                    {% for category, message in messages %}
+                            
+                        <p>{{ message }}</p>
+
+                    {% endfor %}
+
+                {% endif %}
+            {% endwith %}
+
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control",placeholder="User Name") }}<br><br>
+    
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control",placeholder="Email Address") }}<br><br>
+    
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control",placeholder="Password") }}<br><br>
+    
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control",placeholder="Confirm Password") }}<br><br>
+            <br>
+    
+            {{ form.submit(class="btn-lg btn-block btn-primary" ) }}
+    
+            <br>
+            <div>
+                <h4>Already have an account?</h4>
+                <a class="nav-link" style="text-align: center;" href="{{ url_for('login') }}">LogIn</a>
+            </div>
+        </form>
+    </div>
+    <style>
+        body{
+            text-align: center;
+            background-color: moccasin;
+            color: black;
+    
+        }
+    </style>
+    </body>
+    </html>
