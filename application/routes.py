@@ -45,21 +45,7 @@ def register():
 @app.route('/login',methods=['GET','POST'])
 def login():
     form = LoginForm()
-
-    if form.validate_on_submit():
-
-        attemted_user = Employee.query.get(form.username.data).first()
-        if attemted_user and attemted_user.check_password_correction(
-            attemted_password=form.password.data
-        ):
-
-            login_user(attemted_user)
-            flash("Loged in succesfully..!!",category='success')
-
-            return redirect(url_for('home'))
-        else:
-            flash("Username and Password not Match please try again",category='danger')
-
+  
 
     return render_template('login.html',form=form)
 
