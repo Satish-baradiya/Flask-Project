@@ -1,10 +1,7 @@
 from flask import app
 from flask_sqlalchemy import SQLAlchemy
-from application import app 
 from application import db
 from application import bcrypt 
-# db=SQLAlchemy(app)
-
 
 
 
