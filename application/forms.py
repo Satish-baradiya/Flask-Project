@@ -37,6 +37,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField(label='Sign In')
 
 
+
 class JobEntry(FlaskForm):
     title = StringField(label='Title', validators=[
                         Length(min=5, max=100), DataRequired()])

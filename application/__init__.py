@@ -9,6 +9,7 @@ with app.app_context():
     print(current_app.name)
 
 
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'da2b039d655db78e3b193c96'

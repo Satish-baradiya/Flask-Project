@@ -14,3 +14,4 @@ class Jobs(db.Model):
     title = db.Column(db.String(length=100), nullable=False)
     description = db.Column(db.String(length=250), nullable=False)
     budget = db.Column(db.Integer(), nullable=False)
+
