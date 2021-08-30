@@ -9,7 +9,6 @@ class Employee(db.Model):
     email_address = db.Column(db.String(length=50), nullable=False)
     password_hash = db.Column(db.String(length=60), nullable=False)
 
-
 class Jobs(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     title = db.Column(db.String(length=100), nullable=False)
