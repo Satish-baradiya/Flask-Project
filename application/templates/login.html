@@ -1,14 +1,15 @@
-    <html>
-        <head>
-            <title>Login</title>
-        </head>
+<html>
+
+    <head>
+        <title>Login</title>
+    </head>
 
     <body class="text-center">
         <div class="container">
             <form method="POST" class="form-register" style="color:rgb(15, 5, 5)">
                 {{ form.hidden_tag() }}
 
-            
+
 
                 <h1 class="h3 mb-3 font-weight-normal">
                     Log In
@@ -16,15 +17,15 @@
                 <br>
                 {{ form.username.label() }}
                 {{ form.username(class="form-control",placeholder="User Name") }}<br><br>
-        
-        
+
+
                 {{ form.password.label() }}
                 {{ form.password(class="form-control",placeholder="Password") }}<br><br>
-        
+
                 <br>
-        
+
                 {{ form.submit(class="btn-lg btn-block btn-primary" ) }}
-        
+
                 <br>
                 <div>
                     <h6>Don't have an account?</h6>
@@ -33,13 +34,15 @@
             </form>
         </div>
         <style>
-            body{
+            body {
                 text-align: center;
                 background-color: moccasin;
                 color: black;
                 text-align: center;
-        
+
             }
+
         </style>
-        </body>
-        </html>
+    </body>
+
+</html>
